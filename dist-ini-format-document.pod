@@ -1,0 +1,49 @@
+=encoding utf8
+
+=head1 Dist-Zilla's dist.ini format
+
+=head2 SYNOPSIS
+
+    name = Acme-Leftpad
+    author = Bugs Bunny <bugs@bunny.tld>
+    license = mit
+    copyright_holder = Bugs Bunny
+    copyright_year = 2016
+
+    [@Filter]
+    -bundle = @Basic
+    -remove = Readme
+
+    [@Author::BUGSBUNNY]
+    [MetaJSON]
+    [Test::PodSpelling]
+    stopwords = EOL
+
+=head1 DESCRIPTION
+
+The L<Dist::Zilla>’s dist.ini file is read by L<Config::MVP>.
+
+Each "normal" section loads the appropriate C<Dist::Zilla::Plugin::> plugin
+(so, for example, C<[MetaJSON]> will load C<Dist::Zilla::Plugin::MetaJSON>).
+
+Within each such section, the C<name = value> pairs are passed as attributes
+of the plugin. These attributes are hopefully documented in its documentation
+and may have sensible defaults.
+
+=head1 COPYRIGHT AND LICENSE
+
+This software is Copyright (c) 2016 by Shlomi Fish.
+
+This is free software, licensed under:
+
+=over 4
+
+=item * The MIT Expat License
+
+=item * Creative Commons ZERO 1.0 (Public Domain)
+
+=item * Any later version of these licences.
+
+=back
+
+=cut
