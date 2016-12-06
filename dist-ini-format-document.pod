@@ -40,6 +40,34 @@ In addition to all that, there are some global, base-class, C<key = value>
 pairs outside any section that are used by the L<Dist::Zilla> class as
 documented there.
 
+=head2 The :version option
+
+One can use a C<:version> option in each plugin's section like so:
+
+    [Test::PodSpelling]
+    :version = 0.6
+
+It has these main effects:
+
+=over 4
+
+=item *
+
+If the installed plugin or bundle does not satisfy that version, dzil will err
+out upon trying to build the dist.
+
+=item *
+
+That module will be included in C<dzil authordeps --missing> if the
+plugin/bundle is installed but doesn't satisfy the version.
+
+=item *
+
+C<dzil authordeps --versions> will include the version in
+its output.
+
+=back
+
 =head1 COPYRIGHT AND LICENSE
 
 This software is Copyright (c) 2016 by Shlomi Fish.
