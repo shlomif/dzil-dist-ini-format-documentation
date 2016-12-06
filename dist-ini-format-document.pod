@@ -26,9 +26,19 @@ The L<Dist::Zilla>’s dist.ini file is read by L<Config::MVP>.
 Each "normal" section loads the appropriate C<Dist::Zilla::Plugin::> plugin
 (so, for example, C<[MetaJSON]> will load C<Dist::Zilla::Plugin::MetaJSON>).
 
-Within each such section, the C<name = value> pairs are passed as attributes
+Within each such section, the C<key = value> pairs are passed as attributes
 of the plugin. These attributes are hopefully documented in its documentation
 and may have sensible defaults.
+
+A section that starts with “C<@>” (= “at sign”) indicates a plugin bundle
+which may load more than one plugin. So C< [@Basic] > will load the
+C<Dist::Zilla::PluginBundle::Basic> bundle.
+
+The special bundle C< [@Filter] > allows one to filter plugins from a bundle.
+
+In addition to all that, there are some global, base-class, C<key = value>
+pairs outside any section that are used by the L<Dist::Zilla> class as
+documented there.
 
 =head1 COPYRIGHT AND LICENSE
 
