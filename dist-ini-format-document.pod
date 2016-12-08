@@ -37,7 +37,14 @@ convention, it is treated the same as a standard plugin, just under
 a different namespace). So C< [@Basic] > will load the
 C<Dist::Zilla::PluginBundle::Basic> bundle.
 
-The special bundle C< [@Filter] > allows one to filter plugins from a bundle.
+The bundle C< [@Filter] > allows one to filter plugins from a bundle.
+
+Plugins that have a leading equal sign (“C<=>”) are loaded verbatim - without
+any namespace prefix, so e.g:
+
+    [=Bugs::Leftpad]
+
+will load C<Bugs::Leftpad> instead of C<Dist::Zilla::Plugin::Bugs::Leftpad> .
 
 In addition to all that, there are some global, base-class, C<key = value>
 pairs outside any section that are used by the L<Dist::Zilla> class as
