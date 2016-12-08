@@ -31,7 +31,10 @@ of the plugin. These attributes are hopefully documented in its documentation
 and may have sensible defaults.
 
 A section that starts with “C<@>” (= “at sign”) indicates a plugin bundle
-which may load more than one plugin. So C< [@Basic] > will load the
+that resides under the L<Dist::Zilla::PluginBundle::> namespace and which
+is normally supposed to load more than one plugin (but this is only a
+convention, it is treated the same as a standard plugin, just under
+a different namespace). So C< [@Basic] > will load the
 C<Dist::Zilla::PluginBundle::Basic> bundle.
 
 The special bundle C< [@Filter] > allows one to filter plugins from a bundle.
