@@ -71,6 +71,11 @@ its output.
 
 =back
 
+=head2 Further Reading
+
+L<https://metacpan.org/pod/Config::MVP#EXAMPLE> - contains a spec for the format
+used by dist.ini files.
+
 =head1 COPYRIGHT AND LICENSE
 
 This software is Copyright (c) 2016 by Shlomi Fish.
