@@ -78,6 +78,9 @@ its output.
 
 =back
 
+Note that a C<:version> option in the top-level non-section will require that
+version of L<Dist::Zilla> itself.
+
 =head2 Loading a plugin more than once using the /-notation
 
     [Prereqs / Foo]
