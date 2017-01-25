@@ -31,7 +31,7 @@ of the plugin. These attributes are hopefully documented in its documentation
 and may have sensible defaults.
 
 A section that starts with “C<@>” (= “at sign”) indicates a plugin bundle
-that resides under the L<Dist::Zilla::PluginBundle::> namespace and which
+that resides under the C<Dist::Zilla::PluginBundle::> namespace and which
 is normally supposed to load more than one plugin (but this is only a
 convention, it is treated the same as a standard plugin, just under
 a different namespace). So C< [@Basic] > will load the
@@ -77,6 +77,23 @@ C<dzil authordeps --versions> will include the version in
 its output.
 
 =back
+
+=head2 Loading a plugin more than once using the /-notation
+
+    [Prereqs / Foo]
+    -stage = build
+    .
+    .
+    .
+    [Prereqs / Bar]
+    -stage = test
+    .
+    .
+    .
+
+The C<[Plugin / Place-under]> notation allows one to load a plugin more than
+once - while potentially using different options for it each time. The name
+after the C</> (= "forward-slash") must be unique.
 
 =head2 Further Reading
 
