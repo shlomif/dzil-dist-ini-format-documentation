@@ -115,6 +115,10 @@ This is free software, licensed under:
 
 =item * Creative Commons ZERO 1.0 (Public Domain)
 
+=item * The licensing terms of perl 5 (version 5.8.0, or at your option any later version).
+
+=item * The Artistic License 2.0
+
 =item * Any later version of these licences.
 
 =back
